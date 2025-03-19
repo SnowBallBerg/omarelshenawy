@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Omar ElShenawy | Console Index</title>
+    <meta name="author" content="Omar ElShenawy" />
+    <meta
+      name="Description"
+      content="Pentesting, reverse engineering, and malware development enthusiast."
+    />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.mousewheel-min.js"></script>
+    <script src="js/jquery.terminal-min.js"></script>
+    <script src="js/keyboard.js"></script>
+    <link href="css/jquery.terminal.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body style="">
+    <script>
+      jQuery(document).ready(function ($) {
+        var id = 1;
+        $("body").terminal(
+          function (command, term) {
+            if (command == "help" || command == "h") {
+              term.echo(
+                "Available commands are email, pgp --key, pgp --fingerprint, cv, github, linkedin, upwork, and twitter"
+              );
+            } else if (command == "cv") {
+              term.echo("https://www.omarelshenawy.com/OmarElShenawy_CV.pdf");
+            } else if (command == "email") {
+              term.echo("contactme@omarelshenawy.com");
+            } else if (command == "github") {
+              term.echo("https://github.com/SnowBallBerg");
+            } else if (command == "linkedin") {
+              term.echo("https://www.linkedin.com/in/omarelshenawy/");
+            } else if (command == "upwork") {
+              term.echo("Not available at the moment");
+            } else if (command == "twitter") {
+              term.echo("https://twitter.com/SnowBallBerg");
+            } else if (command == "pgp --key") {
+              term.echo("Not available at the moment");
+            } else if (command == "pgp --fingerprint") {
+              term.echo("Not available at the moment");
+            } else {
+              term.echo("Unknown command: " + command);
+            }
+          },
+          {
+            greetings:
+              "Welcome to Omar ElShenawy's website.\n\
+As you can see, you can use the terminal.\n\
+If you would like to use a \"normal\" website instead, please go to https://omarelshenawy.com/lame\n\
+Have fun, and don't hesitate to use 'help' if you need it!",
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
