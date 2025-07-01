@@ -6,7 +6,7 @@
     <meta name="author" content="Omar ElShenawy" />
     <meta
       name="Description"
-      content="Pentesting, reverse engineering, and malware development enthusiast."
+      content="SnowBallBerg — security researcher focused on pentesting, reverse engineering, and infosec education."
     />
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery.mousewheel-min.js"></script>
@@ -23,7 +23,7 @@
           function (command, term) {
             if (command == "help" || command == "h") {
               term.echo(
-                "Available commands are email, pgp --key, pgp --fingerprint, cv, github, linkedin, upwork, and twitter"
+                "Available commands are email, blog, pgp --key, pgp --fingerprint, cv, github, linkedin, upwork, and twitter"
               );
             } else if (command == "cv") {
               term.echo("https://www.omarelshenawy.com/OmarElShenawy_CV.pdf");
@@ -31,6 +31,8 @@
               term.echo("contactme@omarelshenawy.com");
             } else if (command == "github") {
               term.echo("https://github.com/SnowBallBerg");
+            } else if (command == "blog") {
+              term.echo("https://snowballberg.medium.com");
             } else if (command == "linkedin") {
               term.echo("https://www.linkedin.com/in/omarelshenawy/");
             } else if (command == "upwork") {
@@ -48,9 +50,10 @@
           {
             greetings:
               "Welcome to Omar ElShenawy's website.\n\
-As you can see, you can use the terminal.\n\
-If you would like to use a \"normal\" website instead, please go to https://omarelshenawy.com/lame\n\
-Have fun, and don't hesitate to use 'help' if you need it!",
+              \n\
+Type 'help' to begin.\n\
+Check out my blog: https://snowballberg.medium.com\n\
+Prefer a normal site? Visit https://omarelshenawy.com/lame`",
           }
         );
       });
